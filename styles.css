@@ -1,0 +1,448 @@
+/* Global Styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styling for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 20px;
+}
+
+/* Styling for the logo */
+header .logo {
+    color: #ecf0f1;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the logo */
+header .logo:hover {
+    color:  #FFD700;
+}
+
+/* Styling for the navigation */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Styling for navigation links */
+header nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect for navigation links */
+header nav ul li a:hover {
+    color:  #FFD700;
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+/* Effect: Underline that animates from left to right */
+header nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color:  #FFD700;
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::before {
+    width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .logo {
+        margin-bottom: 15px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    color: white;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 22px;
+    margin: 10px 0 30px 0;
+    letter-spacing: 1px;
+}
+/* Home Section Styles */
+.home-section {
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    margin: 0; /* Remove margin */
+}
+
+.home-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-details h1 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 18px;
+    color: green;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.cart-button {
+    padding: 10px 20px;
+    background-color: #f04f00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.cart-button:hover {
+    background-color: #c03e00;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background-color: #f5f5f5;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Form container */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels */
+.contact-form label {
+    display: block;
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Form Inputs */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Focus Effect */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Submit Button */
+.submit-btn:hover {
+    background-color: #2980b9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Focus Effect */
+.submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-section h1 {
+        font-size: 2rem;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+}
+
+/* Portal Tech Co. Section (from new.html) */
+.background {
+    background: url('background.png') no-repeat center center/cover;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 22px;
+    margin: 10px 0 30px 0;
+    letter-spacing: 1px;
+}
+
+/* Categories Section */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    padding: 30px;
+    width: 70%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.category-item {
+    width: 150px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.category-item:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.category-item:hover p {
+    color: #FFD700;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Light background color */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc; /* Adds a subtle separation line */
+}
+
+.footer-container {
+    max-width: 900px; /* Limit the width of the footer content */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.contact-info {
+    margin-bottom: 15px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center align social links */
+    gap: 20px; /* Space between links */
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #e3e4e6; /* Bootstrap primary color */
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFD700; /* Darker color on hover */
+}
+span{
+    color: white;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-section h1, .content h1 {
+        font-size: 36px;
+    }
+
+    .home-section p, .content p {
+        font-size: 18px;
+    }
+
+    .categories {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .category-item {
+        width: 120px;
+        margin: 15px;
+    }
+}
+/* Product Image Styling */
+.product-image {
+    width: 100%; /* Make the image container responsive */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image doesn't overflow the container */
+}
+
+.product-image img {
+    width: 300px; /* Set a fixed width for the image */
+    height: 300px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image maintains aspect ratio and covers the container */
+}

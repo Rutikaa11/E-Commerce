@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>E-Commerce Product Page</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="logo">Shopify</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Home Section with Content -->
+<section id="home" class="home-section">
+    <div class="background">
+        <div class="content">
+            <h1>Portal Tech Co.</h1>
+            <p>CHOOSE A CATEGORY</p>
+            <div class="categories">
+                <a href="#" class="category-item">
+                    <i class="fas fa-print fa-3x"></i>
+                    <p>Printers</p>
+                </a>
+                <a href="#" class="category-item">
+                    <i class="material-icons" style="font-size:48px;">desktop_mac</i>
+                    <p>Monitors</p>
+                </a>
+                <a href="#" class="category-item">
+                    <i class="material-icons" style="font-size:48px;">headset</i>
+                    <p>Headsets</p>
+                </a>
+                <a href="#" class="category-item">
+                    <i class="material-icons" style="font-size:48px;">keyboard</i>
+                    <p>Keyboards</p>
+                </a>
+                <a href="#" class="category-item">
+                    <i class="material-icons" style="font-size:48px;">memory</i>
+                    <p>Processors</p>
+                </a>
+                <a href="#" class="category-item">
+                    <i class="material-icons" style="font-size:48px;">mouse</i>
+                    <p>Mouse</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Product Section -->
+<div id="products" class="container">
+    <h1>Our Products</h1>
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="Epson Workforce ES-400.jpg" alt="Epson Workforce ES-400 Image">
+            </div>
+            <div class="product-details">
+                <h1>Epson Workforce ES-400</h1>
+                <p class="price">$349.99</p>
+                <p class="description">Color Duplex Desktop Document Scanner for PC and Mac, with Auto Document Feeder (ADF) and Image Adjustment Tools, ES-400</p>
+                <button class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="NetumScan Bluetooth QR Barcode Scanner with Stand.jpg" alt="NetumScan Bluetooth QR Barcode Scanner Image">
+            </div>
+            <div class="product-details">
+                <h1>NetumScan Bluetooth QR Barcode Scanner with Stand</h1>
+                <p class="price">$58.99</p>
+                <p class="description">3 in 1 Wireless 1D 2D Bar Code Scanner USB Image Bar Code Reader for Computer, Tablet, iPhone, iPad, Android</p>
+                <button class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="Win10Office2019.jpg" alt="Win10/Office2019 Image">
+            </div>
+            <div class="product-details">
+                <h1>Win10/Office2019</h1>
+                <p class="price">$188.99</p>
+                <p class="description">Compact Mini Laptop/Only 0.8kg / Lightweight and Slim/Mute High-Speed Celeron N3350 CPU, 1280 * 800 IPS, 3GB RAM/64GB ROM, for Beginners, Students, Business and Travel, Blue.</p>
+                <button class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="TECKNET Ergonomic Mouse.jpg" alt="TECKNET Ergonomic Mouse Image">
+            </div>
+            <div class="product-details">
+                <h1>TECKNET Ergonomic Mouse</h1>
+                <p class="price">$89.99</p>
+                <p class="description">800 DPI Vertical Wireless Mouse 2.4G Silent Optical Vertical Mouse 6 Buttons for Laptop, Computer, PC, Desktop, MacBook</p>
+                <button class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="Meta Quest 3 128GB.jpg" alt="Meta Quest 3 128GB Image">
+            </div>
+            <div class="product-details">
+                <h1>Meta Quest 3 128GB — Breakthrough Mixed Reality Headset</h1>
+                <p class="price">$430.00</p>
+                <p class="description">Dive into extraordinary experiences with a mixed reality headset that transforms your home into an exciting new playground, where virtual elements blend into your actual surroundings.</p>
+                <button class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h1>Contact Us</h1>
+    <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</section>
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="contact-info">
+            
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.linkedin.com/in/rutika-aldar-full-stack-developer/" target="_blank">
+                        <i class="bi bi-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Rutikaa11" target="_blank">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:rutikaaldar@gmail.com">
+                        <i class="bi bi-envelope-fill"></i> Email
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p><span>&copy; 2024 Rutika Balu Aldar. All rights reserved.</span></p>
+    </div>
+</footer>
+
+
+</body>
+</html>
